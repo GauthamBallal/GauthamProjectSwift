@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9057" systemVersion="14F27" minimumToolsVersion="Automatic">
+    <entity name="GKBQuestion" representedClassName="GKBQuestion" syncable="YES">
+        <attribute name="correctAnswer" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hint" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="optionFour" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="optionOne" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="optionThree" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="optionTwo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="question" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="questionID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="testDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="testID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="testName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="test" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GKBTest" inverseName="questions" inverseEntity="GKBTest" syncable="YES"/>
+    </entity>
+    <entity name="GKBTest" representedClassName="GKBTest" syncable="YES">
+        <attribute name="testDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="testID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="testName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="questions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="GKBQuestion" inverseName="test" inverseEntity="GKBQuestion" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="GKBTest" positionX="4914" positionY="-387" width="128" height="103"/>
+        <element name="GKBQuestion" positionX="5182" positionY="-315" width="128" height="223"/>
+    </elements>
+</model>
