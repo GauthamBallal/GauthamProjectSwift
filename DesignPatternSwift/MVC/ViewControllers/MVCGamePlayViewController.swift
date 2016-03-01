@@ -34,7 +34,7 @@ class MVCGamePlayViewController: GKBSuperViewController {
         super.viewDidLoad()
         self.timerButton.setTitle(getTimeForSeconds(GKBConstants.kTotalGameTime), forState: .Normal)
 
-        self.timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "timerChanged", userInfo: nil, repeats: true)
+        self.timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("timerChanged"), userInfo: nil, repeats: true)
         self.currentQuestion = 0;
         for question in self.test!.questions! {
             self.questionsArray.addObject(question)
@@ -80,7 +80,7 @@ class MVCGamePlayViewController: GKBSuperViewController {
     {
         let minute = floor(time/60)
         let seconds = time - (60*minute)
-        return String(format: "%@:%@", minute < 10.0 ? String(format: "0%d", minute) : String(format: "%d", minute),seconds < 10.0 ? String(format: "0%d", seconds) : String(format: "%d", seconds))
+        return String(format: "%@:%@", minute < 10.0 ? String(format: "0%.0f", minute) : String(format: "%.0f", minute),seconds < 10.0 ? String(format: "0%.0f", seconds) : String(format: "%.0f", seconds));
     }
     
     func timerChanged()
