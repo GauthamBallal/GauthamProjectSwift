@@ -42,7 +42,7 @@ class ViewController: UIViewController {
     
     func displayMVCHomeController()
     {
-        let viewController : UIViewController = UIStoryboard.gameMVCStoryBoard().instantiateInitialViewController()!;
+        let viewController : UIViewController = UIStoryboard.gameMVCStoryBoard().instantiateViewControllerWithIdentifier("CDPackageListingVC")
         self.pushViewController(viewController, withAnimation: true)
     }
     

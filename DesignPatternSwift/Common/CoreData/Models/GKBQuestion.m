@@ -10,7 +10,7 @@
 #import "GKBTest.h"
 
 @implementation GKBQuestion
-
+@synthesize userAnswer;
 // Insert code here to add functionality to your managed object subclass
 
 @end

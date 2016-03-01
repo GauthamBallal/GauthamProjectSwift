@@ -32,7 +32,7 @@ import Foundation
     static let kCDQuestionCorrectAnswer = "correctAnswer"
     static let kCDQuestionHint = "hint"
     
-    static let  kTotalGameTime = 10
+    static let  kTotalGameTime = 240.0
     static let  kCustomNavigationBarTag = 9045
     static let  kHintNotification = "HintTapped"
     

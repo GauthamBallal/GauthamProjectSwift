@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface GKBQuestion : NSManagedObject
 
 // Insert code here to declare functionality of your managed object subclass
+@property(nonatomic,strong) NSString *userAnswer;
 
 @end
 

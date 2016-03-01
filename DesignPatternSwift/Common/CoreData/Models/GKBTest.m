@@ -12,5 +12,13 @@
 @implementation GKBTest
 
 // Insert code here to add functionality to your managed object subclass
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        
+    }
+    return self;
+}
 
 @end

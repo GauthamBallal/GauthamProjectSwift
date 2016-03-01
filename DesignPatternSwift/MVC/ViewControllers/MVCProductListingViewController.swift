@@ -40,5 +40,13 @@ class MVCProductListingViewController: GKBSuperViewController {
         cell.constructCellWith(test);
         return cell
     }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
+    {
+        let viewController : MVCGamePlayViewController = UIStoryboard.gameMVCStoryBoard().instantiateViewControllerWithIdentifier("CDGamePlayVC") as! MVCGamePlayViewController
+
+        viewController.test = testsArray[indexPath.row] as? GKBTest
+        GKBConstants.BASE_VIEWCONTROLLER.pushViewController(viewController, withAnimation: true)
+    }
 
 }
