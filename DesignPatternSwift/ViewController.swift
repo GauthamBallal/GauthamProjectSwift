@@ -25,9 +25,9 @@ class ViewController: UIViewController {
     }
     
     
-    func getIdentifierForRow(row:NSInteger) -> NSString
+    func getIdentifierForRow(row:NSInteger) -> String
     {
-        var identifier:NSString;
+        var identifier:String;
         
         switch (row){
         case 0:
@@ -46,6 +46,8 @@ class ViewController: UIViewController {
         self.pushViewController(viewController, withAnimation: true)
     }
     
+    // MARK: -  NavigationController
+    
     func pushViewController(viewControllerToBePushed : UIViewController, withAnimation:Bool)
     {
         let navBar : GKBNavigationBar = self.navigationController?.navigationBar.viewWithTag(GKBConstants.kCustomNavigationBarTag) as! GKBNavigationBar
@@ -54,18 +56,7 @@ class ViewController: UIViewController {
         self.navigationController?.pushViewController(viewControllerToBePushed, animated: true)
         
     }
-  /*
-    -(void)popViewControllerAnimated:(BOOL)animation
-    {
-    GKBNavigationBar *customNavigationBar =  (GKBNavigationBar*)[self.navigationController.navigationBar viewWithTag:kCustomNavigationBarTag];
-    if(self.navigationController.viewControllers.count == 2 )
-    [customNavigationBar shouldHideBackButton:YES];
-    
-    [customNavigationBar shouldHideHintButton:YES];
-    
-    [self.navigationController popViewControllerAnimated:animation];
-    }
-*/
+
     func popViewControllerAnimated(animated :Bool)
     {
         let navBar : GKBNavigationBar = self.navigationController?.navigationBar.viewWithTag(GKBConstants.kCustomNavigationBarTag) as! GKBNavigationBar
@@ -97,7 +88,16 @@ class ViewController: UIViewController {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
     {
-        displayMVCHomeController();
+        switch(indexPath.row)
+        {
+            case GKBConstants.DesignPattern.eMVC.rawValue:
+                displayMVCHomeController();
+            case GKBConstants.DesignPattern.eMMVM.rawValue:
+                displayMVCHomeController();
+            default:
+                displayMVCHomeController();
+        }
+        
     }
 
     
