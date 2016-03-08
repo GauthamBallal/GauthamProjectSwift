@@ -18,6 +18,9 @@
 		AC88157C1C858F3B00F28922 /* MVCGamePlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC88157B1C858F3B00F28922 /* MVCGamePlayViewController.swift */; };
 		AC88157E1C85926600F28922 /* FrameExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC88157D1C85926600F28922 /* FrameExtension.swift */; };
 		AC8815801C8593BB00F28922 /* FontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC88157F1C8593BB00F28922 /* FontExtension.swift */; };
+		ACB9B2C81C8D459E00AB61D3 /* MVCResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB9B2C71C8D459E00AB61D3 /* MVCResultViewController.swift */; };
+		ACB9B2CA1C8D4B8400AB61D3 /* MVCAllAnswersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB9B2C91C8D4B8400AB61D3 /* MVCAllAnswersViewController.swift */; };
+		ACB9B2CC1C8D4C2D00AB61D3 /* GKBAllAnswersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB9B2CB1C8D4C2D00AB61D3 /* GKBAllAnswersTableViewCell.swift */; };
 		ACCE0BDD1C85C53400F7004C /* GKBOptionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCE0BDC1C85C53400F7004C /* GKBOptionsTableViewCell.swift */; };
 		ACD7DB761C84175A00E2D31A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD7DB751C84175A00E2D31A /* AppDelegate.swift */; };
 		ACD7DB781C84175A00E2D31A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD7DB771C84175A00E2D31A /* ViewController.swift */; };
@@ -49,6 +52,9 @@
 		AC88157B1C858F3B00F28922 /* MVCGamePlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVCGamePlayViewController.swift; sourceTree = "<group>"; };
 		AC88157D1C85926600F28922 /* FrameExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrameExtension.swift; sourceTree = "<group>"; };
 		AC88157F1C8593BB00F28922 /* FontExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontExtension.swift; sourceTree = "<group>"; };
+		ACB9B2C71C8D459E00AB61D3 /* MVCResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVCResultViewController.swift; sourceTree = "<group>"; };
+		ACB9B2C91C8D4B8400AB61D3 /* MVCAllAnswersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVCAllAnswersViewController.swift; sourceTree = "<group>"; };
+		ACB9B2CB1C8D4C2D00AB61D3 /* GKBAllAnswersTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKBAllAnswersTableViewCell.swift; sourceTree = "<group>"; };
 		ACCE0BDC1C85C53400F7004C /* GKBOptionsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKBOptionsTableViewCell.swift; sourceTree = "<group>"; };
 		ACD7DB721C84175A00E2D31A /* DesignSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesignSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACD7DB751C84175A00E2D31A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +120,8 @@
 			children = (
 				AC5F4A831C844BC300B657FC /* MVCProductListingViewController.swift */,
 				AC88157B1C858F3B00F28922 /* MVCGamePlayViewController.swift */,
+				ACB9B2C71C8D459E00AB61D3 /* MVCResultViewController.swift */,
+				ACB9B2C91C8D4B8400AB61D3 /* MVCAllAnswersViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -123,6 +131,7 @@
 			children = (
 				AC5F4A851C844BF200B657FC /* GKBProductListingTableViewCell.swift */,
 				ACCE0BDC1C85C53400F7004C /* GKBOptionsTableViewCell.swift */,
+				ACB9B2CB1C8D4C2D00AB61D3 /* GKBAllAnswersTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -321,9 +330,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACB9B2C81C8D459E00AB61D3 /* MVCResultViewController.swift in Sources */,
 				AC88157E1C85926600F28922 /* FrameExtension.swift in Sources */,
 				ACCE0BDD1C85C53400F7004C /* GKBOptionsTableViewCell.swift in Sources */,
 				ACD7DBAE1C8418F300E2D31A /* GKBConstants.swift in Sources */,
+				ACB9B2CC1C8D4C2D00AB61D3 /* GKBAllAnswersTableViewCell.swift in Sources */,
 				ACD7DB781C84175A00E2D31A /* ViewController.swift in Sources */,
 				ACD7DB761C84175A00E2D31A /* AppDelegate.swift in Sources */,
 				ACD7DBAA1C84188700E2D31A /* GKBDataConverter.m in Sources */,
@@ -341,6 +352,7 @@
 				ACD7DBBA1C841E5A00E2D31A /* GKBTest.m in Sources */,
 				AC88157C1C858F3B00F28922 /* MVCGamePlayViewController.swift in Sources */,
 				AC5F4A8B1C84508C00B657FC /* StoryboardExtension.swift in Sources */,
+				ACB9B2CA1C8D4B8400AB61D3 /* MVCAllAnswersViewController.swift in Sources */,
 				ACD7DBB81C841E5A00E2D31A /* GKBQuestion.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

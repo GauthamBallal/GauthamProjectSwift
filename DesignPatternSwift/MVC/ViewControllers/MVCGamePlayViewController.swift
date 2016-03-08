@@ -20,6 +20,7 @@ class MVCGamePlayViewController: GKBSuperViewController {
     @IBOutlet weak var  hintView:UIView!
     @IBOutlet weak var  hintPopUpImageView:UIImageView!
     @IBOutlet weak var  hintLabel:UILabel!
+    @IBOutlet weak var optionsTableView: UITableView!
     
     var test : GKBTest?
 
@@ -41,6 +42,7 @@ class MVCGamePlayViewController: GKBSuperViewController {
         }
 
         self.questionLabel.numberOfLines = 0;
+        loadViewWithQuestion()
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -49,6 +51,11 @@ class MVCGamePlayViewController: GKBSuperViewController {
         let navBar : GKBNavigationBar = self.navigationController?.navigationBar.viewWithTag(GKBConstants.kCustomNavigationBarTag) as! GKBNavigationBar
         navBar.shouldHideBackButton(true);
         navBar.shouldHideHintButton(false)
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        self.optionsTableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -125,6 +132,10 @@ class MVCGamePlayViewController: GKBSuperViewController {
     // MARK: - Action Methods
     
     @IBAction func submitButtonPressed(sender: AnyObject) {
+        let viewController : MVCResultViewController = UIStoryboard.gameMVCStoryBoard().instantiateViewControllerWithIdentifier("CDResultChartVC") as! MVCResultViewController
+        
+        viewController.questionsArray = self.questionsArray
+        GKBConstants.BASE_VIEWCONTROLLER.pushViewController(viewController, withAnimation: true)
     }
     
     @IBAction func nextButtonPressed(sender: AnyObject) {

@@ -66,6 +66,15 @@ class ViewController: UIViewController {
         navBar.shouldHideHintButton(true)
         self.navigationController?.popViewControllerAnimated(animated);
     }
+    
+    func popViewRootViewControllerAnimated(animated :Bool)
+    {
+        let navBar : GKBNavigationBar = self.navigationController?.navigationBar.viewWithTag(GKBConstants.kCustomNavigationBarTag) as! GKBNavigationBar
+        navBar.shouldHideBackButton(true);
+        navBar.shouldHideHintButton(true)
+        self.navigationController?.popToRootViewControllerAnimated(animated);
+    }
+
 
 
     // MARK: -  TableViewDelegate
