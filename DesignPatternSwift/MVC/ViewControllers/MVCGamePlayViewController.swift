@@ -132,6 +132,12 @@ class MVCGamePlayViewController: GKBSuperViewController {
     // MARK: - Action Methods
     
     @IBAction func submitButtonPressed(sender: AnyObject) {
+        
+        if self.timer.valid == true
+        {
+            self.timer.invalidate()
+        }
+        
         let viewController : MVCResultViewController = UIStoryboard.gameMVCStoryBoard().instantiateViewControllerWithIdentifier("CDResultChartVC") as! MVCResultViewController
         
         viewController.questionsArray = self.questionsArray

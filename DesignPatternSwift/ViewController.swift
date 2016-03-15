@@ -46,6 +46,12 @@ class ViewController: UIViewController {
         self.pushViewController(viewController, withAnimation: true)
     }
     
+    func displayMMVMHomeController()
+    {
+        let viewController : UIViewController = UIStoryboard.gameMMVMStoryBoard().instantiateViewControllerWithIdentifier("CDPackageListingVC")
+        self.pushViewController(viewController, withAnimation: true)
+    }
+    
     // MARK: -  NavigationController
     
     func pushViewController(viewControllerToBePushed : UIViewController, withAnimation:Bool)
@@ -102,7 +108,7 @@ class ViewController: UIViewController {
             case GKBConstants.DesignPattern.eMVC.rawValue:
                 displayMVCHomeController();
             case GKBConstants.DesignPattern.eMMVM.rawValue:
-                displayMVCHomeController();
+                displayMMVMHomeController();
             default:
                 displayMVCHomeController();
         }

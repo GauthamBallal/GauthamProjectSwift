@@ -41,7 +41,7 @@ import Foundation
     static let IS_IPHONE5 = UIScreen.mainScreen().bounds.size.height == 568 ? true:false
     
     enum DesignPattern : NSInteger {
-        case eMVC = 1
+        case eMVC = 0
         case eMMVM,eMVP
     }
     
