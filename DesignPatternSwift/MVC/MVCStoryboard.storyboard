@@ -258,7 +258,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="41"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="247C0144-87DC-426F-BCFE-E3B419A9F6E7" id="dS9-SM-HT3">
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="10E502CE-4302-4CE4-8F24-529A966F2946" id="dS9-SM-HT3">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="41"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                             </imageView>
@@ -342,7 +342,6 @@
                         <outlet property="hintLabel" destination="T3L-UL-HAt" id="Zk7-Y7-TuW"/>
                         <outlet property="hintPopUpImageView" destination="bTg-15-N41" id="2eb-Cv-jA4"/>
                         <outlet property="hintView" destination="JkO-d8-N6h" id="46X-8r-04h"/>
-                        <outlet property="optionsTableView" destination="lSf-20-vub" id="d25-PP-anw"/>
                         <outlet property="packageNameButton" destination="GaF-2x-nmO" id="foa-7L-3Uj"/>
                         <outlet property="questionLabel" destination="8Z3-lc-We8" id="S9M-Xp-Kt2"/>
                         <outlet property="questionView" destination="dRg-zD-Z6B" id="ffE-K3-pBl"/>
@@ -495,7 +494,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="247C0144-87DC-426F-BCFE-E3B419A9F6E7" width="320" height="41">
+        <image name="10E502CE-4302-4CE4-8F24-529A966F2946" width="320" height="41">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw

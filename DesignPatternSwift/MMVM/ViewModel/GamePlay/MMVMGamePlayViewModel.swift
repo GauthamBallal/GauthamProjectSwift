@@ -11,25 +11,24 @@ import UIKit
 
 class MMVMGamePlayViewModel : MMVMGamePlayInterface {
     
-    typealias MMVMTimerCallack = (timeToSet:NSString?) -> (Void)
-    
-    var timerCallback:MMVMTimerCallack?
+    var timerCallback:GKBConstants.MMVMTimerCallack?
     var currentTime:Double = 0.0
     var userSelectedAnswer : NSString = ""
     var timer:NSTimer = NSTimer()
     var questionsArray:NSMutableArray = NSMutableArray()
     var currentQuestion:Int = 0
     
-    var test : GKBTest?
+    var test : GKBTest? {
+        didSet{
+            for question in self.test!.questions! {
+                self.questionsArray.addObject(question)
+            }
+        }
+    }
     
-    init(inTest: GKBTest) {
-        self.test = inTest
+    init() {
         self.timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("timerChanged"), userInfo: nil, repeats: true)
         self.currentQuestion = 0;
-        for question in self.test!.questions! {
-            self.questionsArray.addObject(question)
-        }
-        
     }
     
     func numberOfRows() -> NSInteger
@@ -78,7 +77,7 @@ class MMVMGamePlayViewModel : MMVMGamePlayInterface {
         return self.currentQuestion
     }
     
-    func setInitialTime(callback : MMVMTimerCallack)
+    func setInitialTime(callback : GKBConstants.MMVMTimerCallack)
     {
         callback(timeToSet: getTimeForSeconds(GKBConstants.kTotalGameTime))
     }
@@ -127,6 +126,7 @@ class MMVMGamePlayViewModel : MMVMGamePlayInterface {
         return String(format: "%@:%@", minute < 10.0 ? String(format: "0%.0f", minute) : String(format: "%.0f", minute),seconds < 10.0 ? String(format: "0%.0f", seconds) : String(format: "%.0f", seconds));
     }
     
+    @objc
     func timerChanged()
     {
         self.currentTime++

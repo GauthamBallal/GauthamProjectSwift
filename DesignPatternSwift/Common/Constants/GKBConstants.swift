@@ -20,6 +20,8 @@ import Foundation
     static let APP_DELEGATE : AppDelegate = (UIApplication.sharedApplication().delegate) as! AppDelegate
     static let BASE_VIEWCONTROLLER : ViewController = ((APP_DELEGATE.window?.rootViewController as! UINavigationController).viewControllers[0]) as! ViewController
     
+    typealias MMVMTimerCallack = (timeToSet:NSString?) -> (Void)
+
     static let kCDTestID = "testID"
     static let kCDTestName = "testName"
     static let kCDTestDescription = "testDescription"

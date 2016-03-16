@@ -12,7 +12,7 @@ protocol MMVMGamePlayInterface
 {
     typealias MMVMTimerCallack = (timeToSet:NSString?) -> (Void)
     
-    var timerCallback:MMVMTimerCallack? { get set }
+    var timerCallback:GKBConstants.MMVMTimerCallack? { get set }
     var currentTime:Double { get set }
     var userSelectedAnswer:NSString { get set }
     var timer:NSTimer { get set }

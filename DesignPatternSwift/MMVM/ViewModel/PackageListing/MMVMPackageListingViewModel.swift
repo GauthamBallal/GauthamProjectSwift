@@ -38,9 +38,8 @@ class MMVMPackageListingViewModel : MMVMPackageListingInterface {
     
     func tableCellTapped(indexPath : NSIndexPath)
     {
-        let viewController : MVCGamePlayViewController = UIStoryboard.gameMVCStoryBoard().instantiateViewControllerWithIdentifier("CDGamePlayVC") as! MVCGamePlayViewController
-        
-        viewController.test = testsArray[indexPath.row] as? GKBTest
+        let viewController : MMVMGamePlayViewController = UIStoryboard.gameMMVMStoryBoard().instantiateViewControllerWithIdentifier("CDGamePlayVC") as! MMVMGamePlayViewController
+        viewController.viewModel.test = self.testsArray[indexPath.row] as? GKBTest
         GKBConstants.BASE_VIEWCONTROLLER.pushViewController(viewController, withAnimation: true)
     }
 }

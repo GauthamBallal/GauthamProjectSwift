@@ -39,10 +39,13 @@ class MVCResultViewController: GKBSuperViewController {
         {
             let question : GKBQuestion = questionsArrayTemp[index] as! GKBQuestion
             var userAnswerAppended = NSString(string: question.userAnswer)
-            userAnswerAppended = userAnswerAppended.stringByReplacingCharactersInRange(NSMakeRange(0, 3), withString: "")
-            let isAnswerCorrect = question.correctAnswer == userAnswerAppended ? true : false
-            if isAnswerCorrect{
-                correctAnswer++
+            if userAnswerAppended.length > 3
+            {
+                userAnswerAppended = userAnswerAppended.stringByReplacingCharactersInRange(NSMakeRange(0, 3), withString: "")
+                let isAnswerCorrect = question.correctAnswer == userAnswerAppended ? true : false
+                if isAnswerCorrect{
+                    correctAnswer++
+                }
             }
         }
         

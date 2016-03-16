@@ -20,7 +20,6 @@ class MVCGamePlayViewController: GKBSuperViewController {
     @IBOutlet weak var  hintView:UIView!
     @IBOutlet weak var  hintPopUpImageView:UIImageView!
     @IBOutlet weak var  hintLabel:UILabel!
-    @IBOutlet weak var optionsTableView: UITableView!
     
     var test : GKBTest?
 
@@ -33,6 +32,10 @@ class MVCGamePlayViewController: GKBSuperViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    
+
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("hintTapped:"), name: GKBConstants.kHintNotification, object: nil)
+        
         self.timerButton.setTitle(getTimeForSeconds(GKBConstants.kTotalGameTime), forState: .Normal)
 
         self.timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("timerChanged"), userInfo: nil, repeats: true)
@@ -55,7 +58,7 @@ class MVCGamePlayViewController: GKBSuperViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        self.optionsTableView.reloadData()
+        self.tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -90,6 +93,7 @@ class MVCGamePlayViewController: GKBSuperViewController {
         return String(format: "%@:%@", minute < 10.0 ? String(format: "0%.0f", minute) : String(format: "%.0f", minute),seconds < 10.0 ? String(format: "0%.0f", seconds) : String(format: "%.0f", seconds));
     }
     
+    @objc
     func timerChanged()
     {
         self.currentTime++
@@ -167,18 +171,30 @@ class MVCGamePlayViewController: GKBSuperViewController {
                 self.hintHolderView.superview?.sendSubviewToBack(self.hintHolderView);
         })
         
-        NSNotificationCenter.defaultCenter().postNotificationName(GKBConstants.kHintNotification, object: nil)
+        NSNotificationCenter.defaultCenter().postNotificationName(GKBConstants.kHintNotification, object: nil, userInfo:["selected":NSNumber(bool: false)])
     }
     
     
     // MARK: - Notifications
     func hintTapped(hintNotification:NSNotification)
     {
-        
         let hintTapped : NSNumber = (hintNotification.userInfo?["selected"])! as! NSNumber
 
         if(hintTapped == 1)
         {
+            let question:GKBQuestion = questionsArray[self.currentQuestion] as! GKBQuestion;
+            let heightForLabel = question.hint?.heightWithConstrainedWidth(self.hintLabel.frame.size.width, font: self.hintLabel.font)
+            var heightForView = heightForLabel! + 86.0;
+            heightForView = heightForView < 128.0 ? 128.0 : heightForView;
+            self.hintView.setHeight(heightForView)
+            self.hintLabel.setHeight(heightForLabel!)
+            
+            let editedImage = self.hintPopUpImageView.image?.resizableImageWithCapInsets(UIEdgeInsetsMake(50.0, 10.0, 20.0, 10.0))
+            self.hintPopUpImageView.image = editedImage
+            self.hintView.center = self.hintHolderView.center
+
+            self.hintLabel.text = question.hint;
+
             self.hintHolderView.superview?.bringSubviewToFront(self.hintHolderView);
 
             UIView.animateWithDuration(0.5, animations: { () -> Void in
