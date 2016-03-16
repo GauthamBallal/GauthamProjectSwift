@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC0906BA1C9958FA008CC5F6 /* MMVMResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0906B91C9958FA008CC5F6 /* MMVMResultViewController.swift */; };
+		AC0906BC1C995910008CC5F6 /* MMVMResultInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0906BB1C995910008CC5F6 /* MMVMResultInterface.swift */; };
+		AC0906BE1C995958008CC5F6 /* MMVMResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0906BD1C995958008CC5F6 /* MMVMResultViewModel.swift */; };
 		AC54CED21C97F806005FFD0F /* MMVMStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC54CED11C97F806005FFD0F /* MMVMStoryboard.storyboard */; };
 		AC54CEE21C98033A005FFD0F /* MMVMPackageListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC54CEE11C98033A005FFD0F /* MMVMPackageListingViewController.swift */; };
 		AC54CEE41C980378005FFD0F /* MMVMPackageListingInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC54CEE31C980378005FFD0F /* MMVMPackageListingInterface.swift */; };
@@ -48,6 +51,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AC0906B91C9958FA008CC5F6 /* MMVMResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMVMResultViewController.swift; sourceTree = "<group>"; };
+		AC0906BB1C995910008CC5F6 /* MMVMResultInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMVMResultInterface.swift; sourceTree = "<group>"; };
+		AC0906BD1C995958008CC5F6 /* MMVMResultViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMVMResultViewModel.swift; sourceTree = "<group>"; };
 		AC54CED11C97F806005FFD0F /* MMVMStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MMVMStoryboard.storyboard; sourceTree = "<group>"; };
 		AC54CEE11C98033A005FFD0F /* MMVMPackageListingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMVMPackageListingViewController.swift; sourceTree = "<group>"; };
 		AC54CEE31C980378005FFD0F /* MMVMPackageListingInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMVMPackageListingInterface.swift; sourceTree = "<group>"; };
@@ -169,6 +175,8 @@
 		AC54CEDA1C9802F9005FFD0F /* Result */ = {
 			isa = PBXGroup;
 			children = (
+				AC0906BB1C995910008CC5F6 /* MMVMResultInterface.swift */,
+				AC0906B91C9958FA008CC5F6 /* MMVMResultViewController.swift */,
 			);
 			path = Result;
 			sourceTree = "<group>";
@@ -199,6 +207,7 @@
 		AC54CEDE1C980302005FFD0F /* Result */ = {
 			isa = PBXGroup;
 			children = (
+				AC0906BD1C995958008CC5F6 /* MMVMResultViewModel.swift */,
 			);
 			path = Result;
 			sourceTree = "<group>";
@@ -441,6 +450,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC54CEEA1C984A47005FFD0F /* MMVMGamePlayInterface.swift in Sources */,
+				AC0906BC1C995910008CC5F6 /* MMVMResultInterface.swift in Sources */,
 				ACB9B2C81C8D459E00AB61D3 /* MVCResultViewController.swift in Sources */,
 				AC88157E1C85926600F28922 /* FrameExtension.swift in Sources */,
 				ACCE0BDD1C85C53400F7004C /* GKBOptionsTableViewCell.swift in Sources */,
@@ -449,6 +459,7 @@
 				ACD7DB781C84175A00E2D31A /* ViewController.swift in Sources */,
 				ACD7DB761C84175A00E2D31A /* AppDelegate.swift in Sources */,
 				ACD7DBAA1C84188700E2D31A /* GKBDataConverter.m in Sources */,
+				AC0906BE1C995958008CC5F6 /* MMVMResultViewModel.swift in Sources */,
 				ACD7DBB91C841E5A00E2D31A /* GKBTest+CoreDataProperties.m in Sources */,
 				ACD7DBB71C841E5A00E2D31A /* GKBQuestion+CoreDataProperties.m in Sources */,
 				AC54CEE61C980BB1005FFD0F /* MMVMGamePlayViewModel.swift in Sources */,
@@ -460,6 +471,7 @@
 				ACD7DB7E1C84175A00E2D31A /* DesignPatternSwift.xcdatamodeld in Sources */,
 				AC5F4A8E1C84538B00B657FC /* GKBSuperViewController.swift in Sources */,
 				AC5F4A841C844BC300B657FC /* MVCProductListingViewController.swift in Sources */,
+				AC0906BA1C9958FA008CC5F6 /* MMVMResultViewController.swift in Sources */,
 				ACD7DBA91C84188700E2D31A /* GKBCoreData.m in Sources */,
 				AC54CEE41C980378005FFD0F /* MMVMPackageListingInterface.swift in Sources */,
 				AC54CEEC1C985162005FFD0F /* MMVMPackageListingViewModel.swift in Sources */,

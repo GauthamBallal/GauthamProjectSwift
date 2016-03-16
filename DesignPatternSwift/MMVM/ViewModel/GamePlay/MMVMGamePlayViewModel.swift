@@ -113,9 +113,9 @@ class MMVMGamePlayViewModel : MMVMGamePlayInterface {
         {
             self.timer.invalidate()
         }
-        let viewController : MVCResultViewController = UIStoryboard.gameMVCStoryBoard().instantiateViewControllerWithIdentifier("CDResultChartVC") as! MVCResultViewController
+        let viewController : MMVMResultViewController = UIStoryboard.gameMMVMStoryBoard().instantiateViewControllerWithIdentifier("CDResultChartVC") as! MMVMResultViewController
         
-        viewController.questionsArray = self.questionsArray
+        viewController.viewModel.answers = self.questionsArray
         GKBConstants.BASE_VIEWCONTROLLER.pushViewController(viewController, withAnimation: true)
     }
     
