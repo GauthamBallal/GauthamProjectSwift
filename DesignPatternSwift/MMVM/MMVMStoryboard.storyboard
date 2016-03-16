@@ -12,8 +12,11 @@
             <string>HelveticaNeueLTStd-Lt</string>
             <string>HelveticaNeueLTStd-Lt</string>
             <string>HelveticaNeueLTStd-Lt</string>
+            <string>HelveticaNeueLTStd-Lt</string>
         </mutableArray>
         <mutableArray key="HelveticaNeueLTStd-Roman.otf">
+            <string>HelveticaNeueLTStd-Roman</string>
+            <string>HelveticaNeueLTStd-Roman</string>
             <string>HelveticaNeueLTStd-Roman</string>
             <string>HelveticaNeueLTStd-Roman</string>
             <string>HelveticaNeueLTStd-Roman</string>
@@ -251,7 +254,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="41"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="AFE82D6E-3E43-485B-A0AA-C7737457F830" id="t22-sg-vcN">
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="3EB37EEE-F734-4B83-8E63-76FA843FE96A" id="t22-sg-vcN">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="41"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                             </imageView>
@@ -395,9 +398,98 @@
             </objects>
             <point key="canvasLocation" x="624" y="211"/>
         </scene>
+        <!--All Answers View Controller-->
+        <scene sceneID="UfC-Rp-Dm8">
+            <objects>
+                <viewController storyboardIdentifier="CDAllAnswersVC" id="sdx-zz-C9F" customClass="MMVMAllAnswersViewController" customModule="DesignSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4uE-8J-rtR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="1bv-TK-uOQ">
+                                <rect key="frame" x="0.0" y="63" width="320" height="505"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="214" sectionHeaderHeight="22" sectionFooterHeight="22" id="4zJ-ZD-87m">
+                                        <rect key="frame" x="0.0" y="-63" width="320" height="512"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <inset key="contentInset" minX="0.0" minY="0.0" maxX="0.0" maxY="10"/>
+                                        <prototypes>
+                                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="AllAnswersCell" rowHeight="200" id="afo-1U-UWk" customClass="MMVMAllAnswersTableViewCell" customModule="DesignSwift" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="86" width="320" height="200"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="afo-1U-UWk" id="dKj-fy-NId">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="QA8-IC-DeP">
+                                                            <rect key="frame" x="10" y="10" width="300" height="190"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="question" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MvS-Xt-tb0">
+                                                            <rect key="frame" x="20" y="20" width="280" height="80"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeueLTStd-Roman" family="Helvetica Neue LT Std" pointSize="13"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="jSq-h3-EiU">
+                                                            <rect key="frame" x="20" y="111" width="280" height="67"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeueLTStd-Lt" family="Helvetica Neue LT Std" pointSize="13"/>
+                                                            <inset key="titleEdgeInsets" minX="15" minY="15" maxX="15" maxY="15"/>
+                                                            <state key="normal" title="A. hiahscasicjasp jasojxaspxsxkasxlaskxaskxask">
+                                                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </state>
+                                                        </button>
+                                                    </subviews>
+                                                </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="answerButton" destination="jSq-h3-EiU" id="G5S-7L-Jpz"/>
+                                                    <outlet property="backgroundImageView" destination="QA8-IC-DeP" id="cj9-fi-5mf"/>
+                                                    <outlet property="questionLabel" destination="MvS-Xt-tb0" id="QZe-Od-ngN"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="sdx-zz-C9F" id="yvC-MO-WnG"/>
+                                            <outlet property="delegate" destination="sdx-zz-C9F" id="sJL-P0-0rl"/>
+                                        </connections>
+                                    </tableView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="t9N-TY-QbL">
+                                        <rect key="frame" x="81" y="457" width="158" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeueLTStd-Roman" family="Helvetica Neue LT Std" pointSize="15"/>
+                                        <inset key="titleEdgeInsets" minX="0.0" minY="3" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Go To Main Menu" backgroundImage="btn_nxt">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="goToMainButtonTapped:" destination="sdx-zz-C9F" eventType="touchUpInside" id="fXQ-9Z-VWJ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <connections>
+                        <outlet property="allAnswersTableView" destination="4zJ-ZD-87m" id="xid-Mu-dnE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yut-DL-IIm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1030" y="213"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="AFE82D6E-3E43-485B-A0AA-C7737457F830" width="320" height="41">
+        <image name="3EB37EEE-F734-4B83-8E63-76FA843FE96A" width="320" height="41">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw

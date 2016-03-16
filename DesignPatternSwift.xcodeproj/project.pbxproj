@@ -10,6 +10,10 @@
 		AC0906BA1C9958FA008CC5F6 /* MMVMResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0906B91C9958FA008CC5F6 /* MMVMResultViewController.swift */; };
 		AC0906BC1C995910008CC5F6 /* MMVMResultInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0906BB1C995910008CC5F6 /* MMVMResultInterface.swift */; };
 		AC0906BE1C995958008CC5F6 /* MMVMResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0906BD1C995958008CC5F6 /* MMVMResultViewModel.swift */; };
+		AC0906C01C99694C008CC5F6 /* MMVMAllAnswersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0906BF1C99694C008CC5F6 /* MMVMAllAnswersViewModel.swift */; };
+		AC0906C21C99696A008CC5F6 /* MMVMAllAnswersInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0906C11C99696A008CC5F6 /* MMVMAllAnswersInterface.swift */; };
+		AC0906C41C996983008CC5F6 /* MMVMAllAnswersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0906C31C996983008CC5F6 /* MMVMAllAnswersViewController.swift */; };
+		AC0906C61C996A65008CC5F6 /* MMVMAllAnswersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0906C51C996A65008CC5F6 /* MMVMAllAnswersTableViewCell.swift */; };
 		AC54CED21C97F806005FFD0F /* MMVMStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC54CED11C97F806005FFD0F /* MMVMStoryboard.storyboard */; };
 		AC54CEE21C98033A005FFD0F /* MMVMPackageListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC54CEE11C98033A005FFD0F /* MMVMPackageListingViewController.swift */; };
 		AC54CEE41C980378005FFD0F /* MMVMPackageListingInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC54CEE31C980378005FFD0F /* MMVMPackageListingInterface.swift */; };
@@ -54,6 +58,10 @@
 		AC0906B91C9958FA008CC5F6 /* MMVMResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMVMResultViewController.swift; sourceTree = "<group>"; };
 		AC0906BB1C995910008CC5F6 /* MMVMResultInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMVMResultInterface.swift; sourceTree = "<group>"; };
 		AC0906BD1C995958008CC5F6 /* MMVMResultViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMVMResultViewModel.swift; sourceTree = "<group>"; };
+		AC0906BF1C99694C008CC5F6 /* MMVMAllAnswersViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMVMAllAnswersViewModel.swift; sourceTree = "<group>"; };
+		AC0906C11C99696A008CC5F6 /* MMVMAllAnswersInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMVMAllAnswersInterface.swift; sourceTree = "<group>"; };
+		AC0906C31C996983008CC5F6 /* MMVMAllAnswersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMVMAllAnswersViewController.swift; sourceTree = "<group>"; };
+		AC0906C51C996A65008CC5F6 /* MMVMAllAnswersTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMVMAllAnswersTableViewCell.swift; sourceTree = "<group>"; };
 		AC54CED11C97F806005FFD0F /* MMVMStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MMVMStoryboard.storyboard; sourceTree = "<group>"; };
 		AC54CEE11C98033A005FFD0F /* MMVMPackageListingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMVMPackageListingViewController.swift; sourceTree = "<group>"; };
 		AC54CEE31C980378005FFD0F /* MMVMPackageListingInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMVMPackageListingInterface.swift; sourceTree = "<group>"; };
@@ -150,6 +158,9 @@
 		AC54CED71C9802F9005FFD0F /* AllAnswers */ = {
 			isa = PBXGroup;
 			children = (
+				AC0906C11C99696A008CC5F6 /* MMVMAllAnswersInterface.swift */,
+				AC0906C31C996983008CC5F6 /* MMVMAllAnswersViewController.swift */,
+				AC0906C51C996A65008CC5F6 /* MMVMAllAnswersTableViewCell.swift */,
 			);
 			path = AllAnswers;
 			sourceTree = "<group>";
@@ -184,6 +195,7 @@
 		AC54CEDB1C980302005FFD0F /* AllAnswers */ = {
 			isa = PBXGroup;
 			children = (
+				AC0906BF1C99694C008CC5F6 /* MMVMAllAnswersViewModel.swift */,
 			);
 			path = AllAnswers;
 			sourceTree = "<group>";
@@ -450,6 +462,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC54CEEA1C984A47005FFD0F /* MMVMGamePlayInterface.swift in Sources */,
+				AC0906C41C996983008CC5F6 /* MMVMAllAnswersViewController.swift in Sources */,
 				AC0906BC1C995910008CC5F6 /* MMVMResultInterface.swift in Sources */,
 				ACB9B2C81C8D459E00AB61D3 /* MVCResultViewController.swift in Sources */,
 				AC88157E1C85926600F28922 /* FrameExtension.swift in Sources */,
@@ -464,8 +477,10 @@
 				ACD7DBB71C841E5A00E2D31A /* GKBQuestion+CoreDataProperties.m in Sources */,
 				AC54CEE61C980BB1005FFD0F /* MMVMGamePlayViewModel.swift in Sources */,
 				AC5F4A7D1C843C5D00B657FC /* GKBNavigationBar.swift in Sources */,
+				AC0906C61C996A65008CC5F6 /* MMVMAllAnswersTableViewCell.swift in Sources */,
 				AC5F4A861C844BF200B657FC /* GKBProductListingTableViewCell.swift in Sources */,
 				AC88157A1C858D6A00F28922 /* StringExtension.swift in Sources */,
+				AC0906C01C99694C008CC5F6 /* MMVMAllAnswersViewModel.swift in Sources */,
 				AC8815801C8593BB00F28922 /* FontExtension.swift in Sources */,
 				AC54CEE21C98033A005FFD0F /* MMVMPackageListingViewController.swift in Sources */,
 				ACD7DB7E1C84175A00E2D31A /* DesignPatternSwift.xcdatamodeld in Sources */,
@@ -473,6 +488,7 @@
 				AC5F4A841C844BC300B657FC /* MVCProductListingViewController.swift in Sources */,
 				AC0906BA1C9958FA008CC5F6 /* MMVMResultViewController.swift in Sources */,
 				ACD7DBA91C84188700E2D31A /* GKBCoreData.m in Sources */,
+				AC0906C21C99696A008CC5F6 /* MMVMAllAnswersInterface.swift in Sources */,
 				AC54CEE41C980378005FFD0F /* MMVMPackageListingInterface.swift in Sources */,
 				AC54CEEC1C985162005FFD0F /* MMVMPackageListingViewModel.swift in Sources */,
 				ACD7DBAB1C84188700E2D31A /* GKBDataSourceManager.m in Sources */,

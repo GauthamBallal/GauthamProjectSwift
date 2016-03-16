@@ -38,8 +38,8 @@ class MMVMResultViewModel: MMVMResultInterface {
     
     func showAllAnswerButonTapped()
     {
-        let viewController : MVCAllAnswersViewController = UIStoryboard.gameMVCStoryBoard().instantiateViewControllerWithIdentifier("CDAllAnswersVC") as! MVCAllAnswersViewController
-        viewController.questionsArray = self.answers
+        let viewController : MMVMAllAnswersViewController = UIStoryboard.gameMMVMStoryBoard().instantiateViewControllerWithIdentifier("CDAllAnswersVC") as! MMVMAllAnswersViewController
+        viewController.viewModel.questionsArray = self.answers!
         GKBConstants.BASE_VIEWCONTROLLER.pushViewController(viewController, withAnimation: true)
     }
 }
