@@ -72,6 +72,12 @@ class MMVMGamePlayViewModel : MMVMGamePlayInterface {
         return question.hint!;
     }
     
+    func getTestTitle() -> String
+    {
+        let question:GKBQuestion = questionsArray.lastObject as! GKBQuestion;
+        return question.testName! as String;
+    }
+    
     func getQuestionNumber() -> NSInteger
     {
         return self.currentQuestion
