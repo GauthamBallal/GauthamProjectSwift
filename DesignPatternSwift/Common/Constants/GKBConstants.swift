@@ -20,7 +20,7 @@ import Foundation
     static let APP_DELEGATE : AppDelegate = (UIApplication.sharedApplication().delegate) as! AppDelegate
     static let BASE_VIEWCONTROLLER : ViewController = ((APP_DELEGATE.window?.rootViewController as! UINavigationController).viewControllers[0]) as! ViewController
     
-    typealias MMVMTimerCallack = (timeToSet:NSString?) -> (Void)
+    typealias MMVMTimerCallack = (timeToSet:String?) -> (Void)
 
     static let kCDTestID = "testID"
     static let kCDTestName = "testName"
@@ -42,7 +42,7 @@ import Foundation
     
     static let IS_IPHONE5 = UIScreen.mainScreen().bounds.size.height == 568 ? true:false
     
-    enum DesignPattern : NSInteger {
+    enum DesignPattern : Int {
         case eMVC = 0
         case eMMVM,eMVP
     }
