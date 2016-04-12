@@ -40,9 +40,13 @@ class MVCGamePlayViewController: GKBSuperViewController {
 
         self.timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("timerChanged"), userInfo: nil, repeats: true)
         self.currentQuestion = 0;
+
+
         for question in self.test!.questions! {
             self.questionsArray.addObject(question)
         }
+        
+        self.packageNameButton .setTitle((self.questionsArray.lastObject! as! GKBQuestion).testName, forState: .Normal)
 
         self.questionLabel.numberOfLines = 0;
         loadViewWithQuestion()

@@ -60,18 +60,11 @@ class MMVMAllAnswersViewController: GKBSuperViewController {
         cell.answerButton.setHeight(answerHeight+30)
         cell.questionLabel.text = question;
 
-        
-        if userAnswer.characters.count > 0
-        {
-            var userAnswerAppender : NSString = NSString(string: userAnswer)
-            userAnswerAppender = userAnswerAppender.stringByReplacingCharactersInRange(NSMakeRange(0, 3), withString: "")
-            let correctAnswer = userAnswerAppender == answer ? true : false
+        if userAnswer.characters.count > 0 {
+            let correctAnswer = viewModel.isUserAnswerCorrectForRow(indexPath.row)
             cell.setBackgroundForState(correctAnswer)
-            
             cell.answerButton.setAttributedTitle(NSAttributedString(string: answer), forState: .Normal)
-        }
-        else
-        {
+        } else {
             cell.setBackgroundForState(false)
             cell.answerButton.setAttributedTitle(NSAttributedString(string: "Not Answered"), forState: .Normal)
         }

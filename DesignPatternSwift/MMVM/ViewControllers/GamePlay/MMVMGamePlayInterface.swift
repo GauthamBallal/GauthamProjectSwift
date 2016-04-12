@@ -23,6 +23,7 @@ protocol MMVMGamePlayInterface
     func optionForRow(row :NSInteger) -> NSString
     func getQuestionText() -> NSString
     func getHint() -> NSString
+    func getTestTitle() -> String
     func getQuestionNumber() -> NSInteger
     func setInitialTime(callback : MMVMTimerCallack)
     func selectedAnswerAtIndexPath(indexPath : NSIndexPath)

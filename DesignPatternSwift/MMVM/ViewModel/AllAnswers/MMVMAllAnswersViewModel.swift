@@ -37,4 +37,15 @@ class MMVMAllAnswersViewModel: MMVMAllAnswersInterface {
         GKBConstants.BASE_VIEWCONTROLLER.popViewRootViewControllerAnimated(true);
     }
     
+    func isUserAnswerCorrectForRow(row : NSInteger) -> Bool
+    {
+        let question:GKBQuestion = questionsArray[row] as! GKBQuestion
+        let answer : String = question.correctAnswer! as String
+        let userAnswer : String = question.userAnswer as String
+
+        var userAnswerAppender : NSString = NSString(string: userAnswer)
+        userAnswerAppender = userAnswerAppender.stringByReplacingCharactersInRange(NSMakeRange(0, 3), withString: "")
+        let correctAnswer = userAnswerAppender == answer ? true : false
+        return correctAnswer;
+    }
 }
