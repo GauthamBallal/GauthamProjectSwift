@@ -21,4 +21,9 @@ extension UIStoryboard
         return UIStoryboard(name: "MMVMStoryboard", bundle: nil)
     }
     
+    class func gameMVPStoryBoard() -> UIStoryboard
+    {
+        return UIStoryboard(name: "MVPStoryboard", bundle: nil)
+    }
+    
 }

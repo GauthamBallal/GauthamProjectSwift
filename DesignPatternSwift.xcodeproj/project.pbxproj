@@ -35,6 +35,25 @@
 		ACB9B2C81C8D459E00AB61D3 /* MVCResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB9B2C71C8D459E00AB61D3 /* MVCResultViewController.swift */; };
 		ACB9B2CA1C8D4B8400AB61D3 /* MVCAllAnswersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB9B2C91C8D4B8400AB61D3 /* MVCAllAnswersViewController.swift */; };
 		ACB9B2CC1C8D4C2D00AB61D3 /* GKBAllAnswersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB9B2CB1C8D4C2D00AB61D3 /* GKBAllAnswersTableViewCell.swift */; };
+		ACC115D41CC8A46B00A85285 /* MVPInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC115D31CC8A46B00A85285 /* MVPInteractor.swift */; };
+		ACC115D61CC8A48700A85285 /* MVPBasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC115D51CC8A48700A85285 /* MVPBasePresenter.swift */; };
+		ACC115D81CC8A4B400A85285 /* MVPPackageListingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC115D71CC8A4B400A85285 /* MVPPackageListingInteractor.swift */; };
+		ACC115DA1CC8A4FE00A85285 /* MVPGamePlayInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC115D91CC8A4FE00A85285 /* MVPGamePlayInteractor.swift */; };
+		ACC115DC1CC8A5F300A85285 /* MVPResultsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC115DB1CC8A5F300A85285 /* MVPResultsInteractor.swift */; };
+		ACC115DE1CC8A62C00A85285 /* MVPAllAnswerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC115DD1CC8A62C00A85285 /* MVPAllAnswerInteractor.swift */; };
+		ACC115E01CC8C18700A85285 /* MVPPackageListingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC115DF1CC8C18700A85285 /* MVPPackageListingPresenter.swift */; };
+		ACC115E21CC8C19A00A85285 /* MVPGamePlayPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC115E11CC8C19A00A85285 /* MVPGamePlayPresenter.swift */; };
+		ACC115E41CC8C1A800A85285 /* MVPResultsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC115E31CC8C1A800A85285 /* MVPResultsPresenter.swift */; };
+		ACC115E61CC8C1B600A85285 /* MVPAllAnswersPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC115E51CC8C1B600A85285 /* MVPAllAnswersPresenter.swift */; };
+		ACC115E81CC8C22000A85285 /* MVPPackageListingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC115E71CC8C22000A85285 /* MVPPackageListingView.swift */; };
+		ACC115EA1CC8C23800A85285 /* MVPPackageListingViewImplementationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC115E91CC8C23800A85285 /* MVPPackageListingViewImplementationViewController.swift */; };
+		ACC115EC1CC8C25600A85285 /* MVPGamePlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC115EB1CC8C25600A85285 /* MVPGamePlayView.swift */; };
+		ACC115EE1CC8C26500A85285 /* MVPResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC115ED1CC8C26500A85285 /* MVPResultView.swift */; };
+		ACC115F01CC8C27300A85285 /* MVPAllAnswersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC115EF1CC8C27300A85285 /* MVPAllAnswersView.swift */; };
+		ACC115F21CC8C28300A85285 /* MVPGamePlayViewImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC115F11CC8C28300A85285 /* MVPGamePlayViewImplementation.swift */; };
+		ACC115F41CC8C29000A85285 /* MVPResultViewImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC115F31CC8C29000A85285 /* MVPResultViewImplementation.swift */; };
+		ACC115F61CC8C29E00A85285 /* MVPAllAnswersViewImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC115F51CC8C29E00A85285 /* MVPAllAnswersViewImplementation.swift */; };
+		ACC115F81CC8D32F00A85285 /* MVPStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACC115F71CC8D32F00A85285 /* MVPStoryboard.storyboard */; };
 		ACCE0BDD1C85C53400F7004C /* GKBOptionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCE0BDC1C85C53400F7004C /* GKBOptionsTableViewCell.swift */; };
 		ACD7DB761C84175A00E2D31A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD7DB751C84175A00E2D31A /* AppDelegate.swift */; };
 		ACD7DB781C84175A00E2D31A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD7DB771C84175A00E2D31A /* ViewController.swift */; };
@@ -83,6 +102,25 @@
 		ACB9B2C71C8D459E00AB61D3 /* MVCResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVCResultViewController.swift; sourceTree = "<group>"; };
 		ACB9B2C91C8D4B8400AB61D3 /* MVCAllAnswersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVCAllAnswersViewController.swift; sourceTree = "<group>"; };
 		ACB9B2CB1C8D4C2D00AB61D3 /* GKBAllAnswersTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKBAllAnswersTableViewCell.swift; sourceTree = "<group>"; };
+		ACC115D31CC8A46B00A85285 /* MVPInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVPInteractor.swift; sourceTree = "<group>"; };
+		ACC115D51CC8A48700A85285 /* MVPBasePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVPBasePresenter.swift; sourceTree = "<group>"; };
+		ACC115D71CC8A4B400A85285 /* MVPPackageListingInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVPPackageListingInteractor.swift; sourceTree = "<group>"; };
+		ACC115D91CC8A4FE00A85285 /* MVPGamePlayInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVPGamePlayInteractor.swift; sourceTree = "<group>"; };
+		ACC115DB1CC8A5F300A85285 /* MVPResultsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVPResultsInteractor.swift; sourceTree = "<group>"; };
+		ACC115DD1CC8A62C00A85285 /* MVPAllAnswerInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVPAllAnswerInteractor.swift; sourceTree = "<group>"; };
+		ACC115DF1CC8C18700A85285 /* MVPPackageListingPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVPPackageListingPresenter.swift; sourceTree = "<group>"; };
+		ACC115E11CC8C19A00A85285 /* MVPGamePlayPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVPGamePlayPresenter.swift; sourceTree = "<group>"; };
+		ACC115E31CC8C1A800A85285 /* MVPResultsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVPResultsPresenter.swift; sourceTree = "<group>"; };
+		ACC115E51CC8C1B600A85285 /* MVPAllAnswersPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVPAllAnswersPresenter.swift; sourceTree = "<group>"; };
+		ACC115E71CC8C22000A85285 /* MVPPackageListingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVPPackageListingView.swift; sourceTree = "<group>"; };
+		ACC115E91CC8C23800A85285 /* MVPPackageListingViewImplementationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVPPackageListingViewImplementationViewController.swift; sourceTree = "<group>"; };
+		ACC115EB1CC8C25600A85285 /* MVPGamePlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVPGamePlayView.swift; sourceTree = "<group>"; };
+		ACC115ED1CC8C26500A85285 /* MVPResultView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVPResultView.swift; sourceTree = "<group>"; };
+		ACC115EF1CC8C27300A85285 /* MVPAllAnswersView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVPAllAnswersView.swift; sourceTree = "<group>"; };
+		ACC115F11CC8C28300A85285 /* MVPGamePlayViewImplementation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVPGamePlayViewImplementation.swift; sourceTree = "<group>"; };
+		ACC115F31CC8C29000A85285 /* MVPResultViewImplementation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVPResultViewImplementation.swift; sourceTree = "<group>"; };
+		ACC115F51CC8C29E00A85285 /* MVPAllAnswersViewImplementation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVPAllAnswersViewImplementation.swift; sourceTree = "<group>"; };
+		ACC115F71CC8D32F00A85285 /* MVPStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MVPStoryboard.storyboard; sourceTree = "<group>"; };
 		ACCE0BDC1C85C53400F7004C /* GKBOptionsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKBOptionsTableViewCell.swift; sourceTree = "<group>"; };
 		ACD7DB721C84175A00E2D31A /* DesignSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesignSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACD7DB751C84175A00E2D31A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -284,6 +322,120 @@
 			path = Superclass;
 			sourceTree = "<group>";
 		};
+		ACC115C71CC8A3F100A85285 /* MVP */ = {
+			isa = PBXGroup;
+			children = (
+				ACC115C81CC8A41200A85285 /* Interactor */,
+				ACC115C91CC8A41200A85285 /* Presenter */,
+				ACC115CA1CC8A41200A85285 /* Views */,
+			);
+			path = MVP;
+			sourceTree = "<group>";
+		};
+		ACC115C81CC8A41200A85285 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				ACC115D31CC8A46B00A85285 /* MVPInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		ACC115C91CC8A41200A85285 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				ACC115D51CC8A48700A85285 /* MVPBasePresenter.swift */,
+				ACC115CC1CC8A43900A85285 /* PackageListing */,
+				ACC115CB1CC8A43900A85285 /* GamePlay */,
+				ACC115CD1CC8A43900A85285 /* Results */,
+				ACC115CE1CC8A43900A85285 /* AllAnswers */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		ACC115CA1CC8A41200A85285 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ACC115D11CC8A44400A85285 /* PackageListing */,
+				ACC115D01CC8A44400A85285 /* GamePlay */,
+				ACC115D21CC8A44400A85285 /* Results */,
+				ACC115CF1CC8A44400A85285 /* AllAnswers */,
+				ACC115F71CC8D32F00A85285 /* MVPStoryboard.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		ACC115CB1CC8A43900A85285 /* GamePlay */ = {
+			isa = PBXGroup;
+			children = (
+				ACC115D91CC8A4FE00A85285 /* MVPGamePlayInteractor.swift */,
+				ACC115E11CC8C19A00A85285 /* MVPGamePlayPresenter.swift */,
+			);
+			path = GamePlay;
+			sourceTree = "<group>";
+		};
+		ACC115CC1CC8A43900A85285 /* PackageListing */ = {
+			isa = PBXGroup;
+			children = (
+				ACC115D71CC8A4B400A85285 /* MVPPackageListingInteractor.swift */,
+				ACC115DF1CC8C18700A85285 /* MVPPackageListingPresenter.swift */,
+			);
+			path = PackageListing;
+			sourceTree = "<group>";
+		};
+		ACC115CD1CC8A43900A85285 /* Results */ = {
+			isa = PBXGroup;
+			children = (
+				ACC115DB1CC8A5F300A85285 /* MVPResultsInteractor.swift */,
+				ACC115E31CC8C1A800A85285 /* MVPResultsPresenter.swift */,
+			);
+			path = Results;
+			sourceTree = "<group>";
+		};
+		ACC115CE1CC8A43900A85285 /* AllAnswers */ = {
+			isa = PBXGroup;
+			children = (
+				ACC115DD1CC8A62C00A85285 /* MVPAllAnswerInteractor.swift */,
+				ACC115E51CC8C1B600A85285 /* MVPAllAnswersPresenter.swift */,
+			);
+			path = AllAnswers;
+			sourceTree = "<group>";
+		};
+		ACC115CF1CC8A44400A85285 /* AllAnswers */ = {
+			isa = PBXGroup;
+			children = (
+				ACC115EF1CC8C27300A85285 /* MVPAllAnswersView.swift */,
+				ACC115F51CC8C29E00A85285 /* MVPAllAnswersViewImplementation.swift */,
+			);
+			path = AllAnswers;
+			sourceTree = "<group>";
+		};
+		ACC115D01CC8A44400A85285 /* GamePlay */ = {
+			isa = PBXGroup;
+			children = (
+				ACC115EB1CC8C25600A85285 /* MVPGamePlayView.swift */,
+				ACC115F11CC8C28300A85285 /* MVPGamePlayViewImplementation.swift */,
+			);
+			path = GamePlay;
+			sourceTree = "<group>";
+		};
+		ACC115D11CC8A44400A85285 /* PackageListing */ = {
+			isa = PBXGroup;
+			children = (
+				ACC115E71CC8C22000A85285 /* MVPPackageListingView.swift */,
+				ACC115E91CC8C23800A85285 /* MVPPackageListingViewImplementationViewController.swift */,
+			);
+			path = PackageListing;
+			sourceTree = "<group>";
+		};
+		ACC115D21CC8A44400A85285 /* Results */ = {
+			isa = PBXGroup;
+			children = (
+				ACC115ED1CC8C26500A85285 /* MVPResultView.swift */,
+				ACC115F31CC8C29000A85285 /* MVPResultViewImplementation.swift */,
+			);
+			path = Results;
+			sourceTree = "<group>";
+		};
 		ACD7DB691C84175A00E2D31A = {
 			isa = PBXGroup;
 			children = (
@@ -307,6 +459,7 @@
 				ACD7DB751C84175A00E2D31A /* AppDelegate.swift */,
 				ACD7DB771C84175A00E2D31A /* ViewController.swift */,
 				ACD7DB8A1C8417D600E2D31A /* Common */,
+				ACC115C71CC8A3F100A85285 /* MVP */,
 				AC54CECE1C97F7DD005FFD0F /* MMVM */,
 				AC5F4A801C84451A00B657FC /* MVC */,
 				ACD7DB791C84175A00E2D31A /* Main.storyboard */,
@@ -451,6 +604,7 @@
 				ACD7DB7B1C84175A00E2D31A /* Main.storyboard in Resources */,
 				AC54CED21C97F806005FFD0F /* MMVMStoryboard.storyboard in Resources */,
 				AC5F4A881C844C4000B657FC /* MVCStoryboard.storyboard in Resources */,
+				ACC115F81CC8D32F00A85285 /* MVPStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,14 +616,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC54CEEA1C984A47005FFD0F /* MMVMGamePlayInterface.swift in Sources */,
+				ACC115F41CC8C29000A85285 /* MVPResultViewImplementation.swift in Sources */,
 				AC0906C41C996983008CC5F6 /* MMVMAllAnswersViewController.swift in Sources */,
 				AC0906BC1C995910008CC5F6 /* MMVMResultInterface.swift in Sources */,
 				ACB9B2C81C8D459E00AB61D3 /* MVCResultViewController.swift in Sources */,
+				ACC115F21CC8C28300A85285 /* MVPGamePlayViewImplementation.swift in Sources */,
+				ACC115E01CC8C18700A85285 /* MVPPackageListingPresenter.swift in Sources */,
 				AC88157E1C85926600F28922 /* FrameExtension.swift in Sources */,
 				ACCE0BDD1C85C53400F7004C /* GKBOptionsTableViewCell.swift in Sources */,
 				ACD7DBAE1C8418F300E2D31A /* GKBConstants.swift in Sources */,
 				ACB9B2CC1C8D4C2D00AB61D3 /* GKBAllAnswersTableViewCell.swift in Sources */,
 				ACD7DB781C84175A00E2D31A /* ViewController.swift in Sources */,
+				ACC115E81CC8C22000A85285 /* MVPPackageListingView.swift in Sources */,
 				ACD7DB761C84175A00E2D31A /* AppDelegate.swift in Sources */,
 				ACD7DBAA1C84188700E2D31A /* GKBDataConverter.m in Sources */,
 				AC0906BE1C995958008CC5F6 /* MMVMResultViewModel.swift in Sources */,
@@ -477,23 +635,37 @@
 				ACD7DBB71C841E5A00E2D31A /* GKBQuestion+CoreDataProperties.m in Sources */,
 				AC54CEE61C980BB1005FFD0F /* MMVMGamePlayViewModel.swift in Sources */,
 				AC5F4A7D1C843C5D00B657FC /* GKBNavigationBar.swift in Sources */,
+				ACC115E61CC8C1B600A85285 /* MVPAllAnswersPresenter.swift in Sources */,
+				ACC115D81CC8A4B400A85285 /* MVPPackageListingInteractor.swift in Sources */,
 				AC0906C61C996A65008CC5F6 /* MMVMAllAnswersTableViewCell.swift in Sources */,
 				AC5F4A861C844BF200B657FC /* GKBProductListingTableViewCell.swift in Sources */,
 				AC88157A1C858D6A00F28922 /* StringExtension.swift in Sources */,
 				AC0906C01C99694C008CC5F6 /* MMVMAllAnswersViewModel.swift in Sources */,
 				AC8815801C8593BB00F28922 /* FontExtension.swift in Sources */,
 				AC54CEE21C98033A005FFD0F /* MMVMPackageListingViewController.swift in Sources */,
+				ACC115E21CC8C19A00A85285 /* MVPGamePlayPresenter.swift in Sources */,
 				ACD7DB7E1C84175A00E2D31A /* DesignPatternSwift.xcdatamodeld in Sources */,
 				AC5F4A8E1C84538B00B657FC /* GKBSuperViewController.swift in Sources */,
+				ACC115EE1CC8C26500A85285 /* MVPResultView.swift in Sources */,
+				ACC115DC1CC8A5F300A85285 /* MVPResultsInteractor.swift in Sources */,
+				ACC115EA1CC8C23800A85285 /* MVPPackageListingViewImplementationViewController.swift in Sources */,
 				AC5F4A841C844BC300B657FC /* MVCProductListingViewController.swift in Sources */,
 				AC0906BA1C9958FA008CC5F6 /* MMVMResultViewController.swift in Sources */,
+				ACC115DA1CC8A4FE00A85285 /* MVPGamePlayInteractor.swift in Sources */,
+				ACC115EC1CC8C25600A85285 /* MVPGamePlayView.swift in Sources */,
 				ACD7DBA91C84188700E2D31A /* GKBCoreData.m in Sources */,
 				AC0906C21C99696A008CC5F6 /* MMVMAllAnswersInterface.swift in Sources */,
 				AC54CEE41C980378005FFD0F /* MMVMPackageListingInterface.swift in Sources */,
+				ACC115F61CC8C29E00A85285 /* MVPAllAnswersViewImplementation.swift in Sources */,
+				ACC115D61CC8A48700A85285 /* MVPBasePresenter.swift in Sources */,
 				AC54CEEC1C985162005FFD0F /* MMVMPackageListingViewModel.swift in Sources */,
 				ACD7DBAB1C84188700E2D31A /* GKBDataSourceManager.m in Sources */,
+				ACC115DE1CC8A62C00A85285 /* MVPAllAnswerInteractor.swift in Sources */,
 				ACD7DBBA1C841E5A00E2D31A /* GKBTest.m in Sources */,
+				ACC115F01CC8C27300A85285 /* MVPAllAnswersView.swift in Sources */,
+				ACC115D41CC8A46B00A85285 /* MVPInteractor.swift in Sources */,
 				AC88157C1C858F3B00F28922 /* MVCGamePlayViewController.swift in Sources */,
+				ACC115E41CC8C1A800A85285 /* MVPResultsPresenter.swift in Sources */,
 				AC54CEE81C984A37005FFD0F /* MMVMGamePlayViewController.swift in Sources */,
 				AC5F4A8B1C84508C00B657FC /* StoryboardExtension.swift in Sources */,
 				ACB9B2CA1C8D4B8400AB61D3 /* MVCAllAnswersViewController.swift in Sources */,
