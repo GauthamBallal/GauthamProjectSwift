@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="HelveticaNeueLTStd-Lt.otf">
@@ -11,8 +11,13 @@
             <string>HelveticaNeueLTStd-Lt</string>
             <string>HelveticaNeueLTStd-Lt</string>
             <string>HelveticaNeueLTStd-Lt</string>
+            <string>HelveticaNeueLTStd-Lt</string>
         </mutableArray>
         <mutableArray key="HelveticaNeueLTStd-Roman.otf">
+            <string>HelveticaNeueLTStd-Roman</string>
+            <string>HelveticaNeueLTStd-Roman</string>
+            <string>HelveticaNeueLTStd-Roman</string>
+            <string>HelveticaNeueLTStd-Roman</string>
             <string>HelveticaNeueLTStd-Roman</string>
             <string>HelveticaNeueLTStd-Roman</string>
             <string>HelveticaNeueLTStd-Roman</string>
@@ -347,6 +352,144 @@
             </objects>
             <point key="canvasLocation" x="415" y="358"/>
         </scene>
+        <!--Result View Implementation-->
+        <scene sceneID="NLI-vk-oKM">
+            <objects>
+                <viewController storyboardIdentifier="CDResultChartVC" id="dTI-Fj-GPX" customClass="MVPResultViewImplementation" customModule="DesignSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jcI-Br-iZx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="listing_header" id="Ayc-cf-dT3">
+                                <rect key="frame" x="0.0" y="68" width="320" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="58v-az-64L">
+                                <rect key="frame" x="98" y="444" width="124" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Show Answers" backgroundImage="result_shw_ansers">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showAnswerButtonTapped:" destination="dTI-Fj-GPX" eventType="touchUpInside" id="bvP-zB-ymh"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZO4-0w-rWn">
+                                <rect key="frame" x="93" y="76" width="135" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeueLTStd-Roman" family="Helvetica Neue LT Std" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8/10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wtJ-JI-cE3">
+                                <rect key="frame" x="20" y="105" width="280" height="395"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeueLTStd-Roman" family="Helvetica Neue LT Std" pointSize="100"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <connections>
+                        <outlet property="resultLabel" destination="wtJ-JI-cE3" id="HP7-k4-cfj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fWg-Fv-Ufc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="789" y="357"/>
+        </scene>
+        <!--All Answers View Implementation-->
+        <scene sceneID="9qo-qQ-DbL">
+            <objects>
+                <viewController storyboardIdentifier="CDAllAnswersVC" id="fUU-hI-RiQ" customClass="MVPAllAnswersViewImplementation" customModule="DesignSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GGv-X3-JfL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="PV5-aL-Ukr">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="214" sectionHeaderHeight="22" sectionFooterHeight="22" id="sOm-vP-cfH">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="512"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <inset key="contentInset" minX="0.0" minY="0.0" maxX="0.0" maxY="10"/>
+                                        <prototypes>
+                                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="AllAnswersCell" rowHeight="200" id="VOv-Qs-dkY" customClass="GKBAllAnswersTableViewCell" customModule="DesignSwift" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="86" width="320" height="200"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VOv-Qs-dkY" id="L5P-5p-X4W">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="I8C-WV-nqB">
+                                                            <rect key="frame" x="10" y="10" width="300" height="190"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="question" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1fi-v3-4qa">
+                                                            <rect key="frame" x="20" y="20" width="280" height="80"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeueLTStd-Roman" family="Helvetica Neue LT Std" pointSize="13"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="3nu-H0-2yx">
+                                                            <rect key="frame" x="20" y="111" width="280" height="67"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeueLTStd-Lt" family="Helvetica Neue LT Std" pointSize="13"/>
+                                                            <inset key="titleEdgeInsets" minX="15" minY="15" maxX="15" maxY="15"/>
+                                                            <state key="normal" title="A. hiahscasicjasp jasojxaspxsxkasxlaskxaskxask">
+                                                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </state>
+                                                        </button>
+                                                    </subviews>
+                                                </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="backgroundImageView" destination="I8C-WV-nqB" id="ROs-J1-P6c"/>
+                                                    <outlet property="optionsButton" destination="3nu-H0-2yx" id="2kB-Qt-EDs"/>
+                                                    <outlet property="questionsLabel" destination="1fi-v3-4qa" id="zed-2a-yK2"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="fUU-hI-RiQ" id="jzP-TB-0e1"/>
+                                            <outlet property="delegate" destination="fUU-hI-RiQ" id="MHd-Zw-KOA"/>
+                                        </connections>
+                                    </tableView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="J5D-6W-Umv">
+                                        <rect key="frame" x="81" y="520" width="158" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeueLTStd-Roman" family="Helvetica Neue LT Std" pointSize="15"/>
+                                        <inset key="titleEdgeInsets" minX="0.0" minY="3" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Go To Main Menu" backgroundImage="btn_nxt">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="goToMainButtonTapped:" destination="fUU-hI-RiQ" eventType="touchUpInside" id="Mwb-he-28Q"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <connections>
+                        <outlet property="allAnswersTableView" destination="sOm-vP-cfH" id="lTR-TD-Pfb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P8b-E3-MgQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1141" y="359"/>
+        </scene>
     </scenes>
     <resources>
         <image name="btm_bar" width="320" height="56"/>
@@ -357,6 +500,7 @@
         <image name="listing_label_buy" width="26" height="68"/>
         <image name="overlay" width="320" height="568"/>
         <image name="popover" width="236" height="128"/>
+        <image name="result_shw_ansers" width="124" height="33"/>
         <image name="test_1" width="84" height="119"/>
     </resources>
 </document>

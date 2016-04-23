@@ -10,9 +10,6 @@ import UIKit
 
 class MMVMResultViewController: GKBSuperViewController {
     var viewModel : MMVMResultViewModel = MMVMResultViewModel()
-
-    var questionsArray : NSArray?
-    
     @IBOutlet weak var resultLabel: UILabel!
     
     override func viewDidLoad() {

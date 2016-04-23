@@ -98,9 +98,7 @@ class MVPGamePlayPresenter: MVPBasePresenter {
         
         self.interactor.setUsersAnswers(self.questionsArray)
         
-        let viewController : MVCResultViewController = UIStoryboard.gameMVCStoryBoard().instantiateViewControllerWithIdentifier("CDResultChartVC") as! MVCResultViewController
-        
-        viewController.questionsArray = self.questionsArray
+        let viewController : MVPResultViewImplementation = UIStoryboard.gameMVPStoryBoard().instantiateViewControllerWithIdentifier("CDResultChartVC") as! MVPResultViewImplementation
         GKBConstants.BASE_VIEWCONTROLLER.pushViewController(viewController, withAnimation: true)
     }
     

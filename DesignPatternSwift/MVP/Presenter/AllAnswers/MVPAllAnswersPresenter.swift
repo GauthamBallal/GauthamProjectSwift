@@ -9,6 +9,7 @@
 import UIKit
 
 class MVPAllAnswersPresenter: MVPBasePresenter {
+    var answers:NSArray?
 
     var view:MVPAllAnswersView
     var interactor:MVPAllAnswerInteractor
@@ -18,6 +19,35 @@ class MVPAllAnswersPresenter: MVPBasePresenter {
         self.view = view
         self.interactor = MVPInteractor.sharedInstance
         super.init()
+    }
+    
+    override func loadData()
+    {
+        self.answers = interactor.getAllQuestions()
+        if self.answers!.count > 0 {
+            self.view.loadDataToView()
+        }
+    }
+    
+    override func totalItems() -> NSInteger
+    {
+        if let answers = self.answers {
+            return answers.count
+        }
+        return 0
+    }
+    
+    override func itemAtIndex(index:NSInteger) -> AnyObject?
+    {
+        if self.answers!.count > index {
+            return self.answers![index]
+        } else {
+            return nil
+        }
+    }
+    
+    func goToMainMenuTapped() {
+        GKBConstants.BASE_VIEWCONTROLLER.popViewRootViewControllerAnimated(true)
     }
     
 }
