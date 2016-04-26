@@ -46,7 +46,7 @@ class MVCGamePlayViewController: GKBSuperViewController {
             self.questionsArray.addObject(question)
         }
         
-        self.packageNameButton .setTitle((self.questionsArray.lastObject! as! GKBQuestion).testName, forState: .Normal)
+//        self.packageNameButton .setTitle((self.questionsArray.lastObject! as! GKBQuestion).testName, forState: .Normal)
 
         self.questionLabel.numberOfLines = 0;
         loadViewWithQuestion()

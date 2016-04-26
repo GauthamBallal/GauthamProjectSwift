@@ -31,7 +31,7 @@ class MMVMGamePlayViewController: GKBSuperViewController {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("hintTapped:"), name: GKBConstants.kHintNotification, object: nil)
         // Do any additional setup after loading the view.
         self.questionLabel.numberOfLines = 0;
-        self.packageNameButton .setTitle(self.viewModel.getTestTitle(), forState: .Normal)
+//        self.packageNameButton .setTitle(self.viewModel.getTestTitle(), forState: .Normal)
         loadViewWithQuestion()
         
         self.viewModel.setInitialTime({ (timeToSet) -> (Void) in
