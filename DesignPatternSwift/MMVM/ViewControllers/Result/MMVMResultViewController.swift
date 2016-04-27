@@ -9,7 +9,7 @@
 import UIKit
 
 class MMVMResultViewController: GKBSuperViewController {
-    var viewModel : MMVMResultViewModel = MMVMResultViewModel()
+    let viewModel : MMVMResultViewModel = MMVMResultViewModel()
     @IBOutlet weak var resultLabel: UILabel!
     
     override func viewDidLoad() {

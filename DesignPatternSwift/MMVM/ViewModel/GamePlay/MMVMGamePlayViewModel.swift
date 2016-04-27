@@ -14,15 +14,18 @@ class MMVMGamePlayViewModel : MMVMGamePlayInterface {
     var timerCallback:GKBConstants.MMVMTimerCallack?
     var currentTime:Double = 0.0
     var userSelectedAnswer : NSString = ""
-    var timer:NSTimer = NSTimer()
-    var questionsArray:NSMutableArray = NSMutableArray()
+    var timer:NSTimer?
+    var questionsArray:NSArray = []
     var currentQuestion:Int = 0
     
     var test : GKBTest? {
         didSet{
+            let mutableCopy : NSMutableArray = NSMutableArray()
+            
             for question in self.test!.questions! {
-                self.questionsArray.addObject(question)
+                mutableCopy.addObject(question)
             }
+            self.questionsArray = NSArray(array: mutableCopy)
         }
     }
     
@@ -115,9 +118,11 @@ class MMVMGamePlayViewModel : MMVMGamePlayInterface {
     
     func submitButtonTapped()
     {
-        if self.timer.valid == true
+        if let timer = self.timer
         {
-            self.timer.invalidate()
+            if timer.valid == true {
+                timer.invalidate()
+            }
         }
         let viewController : MMVMResultViewController = UIStoryboard.gameMMVMStoryBoard().instantiateViewControllerWithIdentifier("CDResultChartVC") as! MMVMResultViewController
         

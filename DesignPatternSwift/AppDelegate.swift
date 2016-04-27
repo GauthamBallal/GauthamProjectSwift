@@ -18,8 +18,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
-        let dataconvertor:GKBDataConverter = GKBDataConverter();
-        dataconvertor.exportFilesToCoreData();
+        let queue = dispatch_queue_create("com.gkb.designpattern", nil)
+
+        dispatch_barrier_async(queue) { () -> Void in
+            let dataconvertor:GKBDataConverter = GKBDataConverter();
+            dataconvertor.exportFilesToCoreData();
+        };
+
+
         
         return true
     }

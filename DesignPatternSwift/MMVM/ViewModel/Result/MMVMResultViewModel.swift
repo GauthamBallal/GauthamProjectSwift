@@ -10,7 +10,7 @@ import UIKit
 
 class MMVMResultViewModel: MMVMResultInterface {
 
-    var answers:NSMutableArray?
+    var answers:NSArray?
     
     func getResultText() -> NSString
     {

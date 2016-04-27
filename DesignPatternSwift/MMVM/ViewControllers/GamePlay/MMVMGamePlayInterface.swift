@@ -15,8 +15,8 @@ protocol MMVMGamePlayInterface
     var timerCallback:GKBConstants.MMVMTimerCallack? { get set }
     var currentTime:Double { get set }
     var userSelectedAnswer:NSString { get set }
-    var timer:NSTimer { get set }
-    var questionsArray:NSMutableArray { get set }
+    var timer:NSTimer? { get set }
+    var questionsArray:NSArray { get set }
     var currentQuestion:Int { get set }
     
     func numberOfRows() -> NSInteger

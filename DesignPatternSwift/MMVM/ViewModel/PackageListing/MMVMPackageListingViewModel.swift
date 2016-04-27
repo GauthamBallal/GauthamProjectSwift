@@ -9,10 +9,9 @@
 import UIKit
 
 class MMVMPackageListingViewModel : MMVMPackageListingInterface {
-    var testsArray : NSArray = []
+    let testsArray : NSArray = GKBDataSourceManager.sharedGKBDataSourceManager().getAllTests()
     
     init() {
-        self.testsArray = GKBDataSourceManager.sharedGKBDataSourceManager().getAllTests()
     }
     
     func numberOfRows() -> NSInteger

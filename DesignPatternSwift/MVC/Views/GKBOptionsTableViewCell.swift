@@ -44,8 +44,7 @@ class GKBOptionsTableViewCell: UITableViewCell {
     
     func heightForText(optionsText:String) -> CGFloat
     {
-        var height : CGFloat
-        height = optionsText.heightWithConstrainedWidth(self.optionsButton.frame.size.width, font: UIFont.helvaticaLight45WithSize(13.0)) + 2
+        let height = optionsText.heightWithConstrainedWidth(self.optionsButton.frame.size.width, font: UIFont.helvaticaLight45WithSize(13.0)) + 2
         return height
     }
     

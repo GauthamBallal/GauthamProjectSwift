@@ -96,8 +96,7 @@ class MMVMGamePlayViewController: GKBSuperViewController {
     
     func heightForText(optionsText:String) -> CGFloat
     {
-        var height : CGFloat
-        height = optionsText.heightWithConstrainedWidth(self.tableView.frame.size.width - 30.0, font: UIFont.helvaticaLight45WithSize(13.0)) + 2
+        let height = optionsText.heightWithConstrainedWidth(self.tableView.frame.size.width - 30.0, font: UIFont.helvaticaLight45WithSize(13.0)) + 2
         return height
     }
     
@@ -164,8 +163,7 @@ class MMVMGamePlayViewController: GKBSuperViewController {
         if(hintTapped == 1)
         {
             let heightForLabel = (self.viewModel.getHint() as String).heightWithConstrainedWidth(self.hintLabel.frame.size.width, font: self.hintLabel.font)
-            var heightForView = heightForLabel + 86.0;
-            heightForView = heightForView < 128.0 ? 128.0 : heightForView;
+            let heightForView = (heightForLabel + 86.0) < 128.0 ? 128.0 : (heightForLabel + 86.0);
             self.hintView.setHeight(heightForView)
             self.hintLabel.setHeight(heightForLabel)
             

@@ -65,7 +65,7 @@ class ViewController: UIViewController {
         let navBar : GKBNavigationBar = self.navigationController?.navigationBar.viewWithTag(GKBConstants.kCustomNavigationBarTag) as! GKBNavigationBar
         navBar.shouldHideBackButton(false);
         navBar.shouldHideHintButton(true)
-        self.navigationController?.pushViewController(viewControllerToBePushed, animated: false)
+        self.navigationController?.pushViewController(viewControllerToBePushed, animated: withAnimation)
         
     }
 

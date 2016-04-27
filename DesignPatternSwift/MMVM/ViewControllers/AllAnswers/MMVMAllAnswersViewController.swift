@@ -11,7 +11,7 @@ import UIKit
 class MMVMAllAnswersViewController: GKBSuperViewController {
     
     @IBOutlet weak var allAnswersTableView: UITableView!
-    var viewModel:MMVMAllAnswersViewModel = MMVMAllAnswersViewModel()
+    let viewModel:MMVMAllAnswersViewModel = MMVMAllAnswersViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()

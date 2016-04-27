@@ -11,7 +11,7 @@ import UIKit
 class MMVMPackageListingViewController: GKBSuperViewController {
     @IBOutlet weak var productListingTableView: UITableView!
 
-    var viewModel : MMVMPackageListingViewModel = MMVMPackageListingViewModel()
+    let viewModel : MMVMPackageListingViewModel = MMVMPackageListingViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
